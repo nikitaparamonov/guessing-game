@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="login.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+		</style>
+		<script src="https://accounts.google.com/gsi/client?hl=en" async></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="login-box">
+				<h1>Enter your email</h1>
+				<form action="/login" method="POST">
+					<div class="input-group">
+						<label for="email"></label>
+						<input type="email" id="email" name="email" required placeholder="Enter your email" />
+					</div>
+					<div class="input-group">
+						<label for="password"></label>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							required
+							placeholder="Enter your password"
+						/>
+					</div>
+					<button type="submit" class="btn">Sign in</button>
+				</form>
+				<div class="footer">
+					<div id="separator" class="separator">or</div>
+					<div
+						id="g_id_onload"
+						data-client_id="1066978649834-lv3rk3n9edj50t66ldci4k86ilo7gmtk.apps.googleusercontent.com"
+						data-login_uri="http://localhost:5500"
+					></div>
+					<div
+						class="g_id_signin"
+						data-type="standard"
+						data-size="large"
+						data-theme="outline"
+						data-text="signin_with"
+						data-shape="rectangular"
+						data-logo_alignment="center"
+						data-locale="en"
+					></div>
+					<a href="#">Sign up</a>
+				</div>
+			</div>
+		</div>
+
+		<script type="module">
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+		  
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+			  apiKey: "AIzaSyCK1CyJr_mhqqy_jenZpleOYOiFra5wDkc",
+			  authDomain: "guessing-game-b1e95.firebaseapp.com",
+			  projectId: "guessing-game-b1e95",
+			  storageBucket: "guessing-game-b1e95.firebasestorage.app",
+			  messagingSenderId: "1066978649834",
+			  appId: "1:1066978649834:web:05f44811cee34734781993",
+			  measurementId: "G-H56RLZEXFF"
+			};
+		  
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+		</script>
+	</body>
+</html>
